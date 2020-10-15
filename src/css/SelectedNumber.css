@@ -1,7 +1,6 @@
 .selected-container {
     display: flex;
     border: 1px solid #000;
-    flex-direction: nowrap;
     justify-content: space-around;
 }
 

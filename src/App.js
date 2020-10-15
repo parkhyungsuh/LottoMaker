@@ -1,9 +1,15 @@
 import React from 'react';
+import Buttons from './component/Buttons';
+import SelectedNumber from './component/SelectedNumber';
+import SelectPannel from './component/SelectPannel';
+import './css/main.css';
 
 const App = () => {
   return ( 
-    <div>
-      로또 앱 만들기
+    <div className="card">
+      <SelectedNumber />
+      <SelectPannel />
+      <Buttons />
     </div>
   )
 }

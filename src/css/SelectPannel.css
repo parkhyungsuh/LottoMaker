@@ -1,0 +1,20 @@
+.number-container {
+    display: flex;
+    border: 1px solid #000;
+    flex-flow: wrap row;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.pannel-number {
+    border: 1px solid #000;
+    width: 35px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.1em;
+    margin:5px
+}
+.picked {
+    background: #000;
+}
