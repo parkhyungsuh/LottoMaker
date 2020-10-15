@@ -1,0 +1,43 @@
+.selected-container {
+    display: flex;
+    border: 1px solid #000;
+    flex-direction: nowrap;
+    justify-content: space-around;
+}
+
+.selected-number {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 28px;
+    margin: 7px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.num10 {
+ background-color: #fbc400;
+}
+
+.num20 {
+    background-color: #69c8f2;
+}
+
+.num30 {
+    background-color: #ff7272;
+}
+
+.num40 {
+    background-color: #aaa;
+}
+
+.num45 {
+    background-color: #b0d840;
+}
+
+.num-none {
+    background: none;
+    content:'';
+}
