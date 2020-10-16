@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../css/SelectedNumber.css';
 
-const SelectedNumber = () => {
-    const [numbers,setNumbers] = useState([]);
+const SelectedNumber = (props) => {
+    const numbers = props.numbers;
     return (
         <div className="selected-container">
             <Number num={numbers[0]} />
