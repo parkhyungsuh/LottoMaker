@@ -1,18 +1,18 @@
 import React from 'react';
 import '../css/Buttons.css'
 
-const Buttons = () => {
+const Buttons = (props) => {
     return (
         <div className="button-container">
-            <ResetButton />
+            <ResetButton reset={props.reset} />
             <AutoButton />
             <SaveButton />
         </div>
     )
 }
 
-const ResetButton = () => {
-    return <button type='button'>리셋</button>
+const ResetButton = (props) => {
+    return <button type='button' onClick={() => props.reset()}>리셋</button>
 }
 const AutoButton = () => {
     return <button type='button'>자동</button>
