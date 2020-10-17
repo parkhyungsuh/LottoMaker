@@ -1,4 +1,5 @@
 import React from 'react';
+import html2canvas from 'html2canvas';
 import '../css/Buttons.css'
 
 const Buttons = (props) => {
@@ -41,6 +42,23 @@ const AutoButton = (props) => {
     return <button type='button' onClick={() => makeNumberSet()}>자동</button>
 }
 const SaveButton = () => {
-    return <button type='button'>저장</button>
+    const saveImage = () => html2canvas(document.querySelector(".card")).then(function(canvas) {
+        saveAs(canvas.toDataURL(), 'name.png');
+    });
+
+    function saveAs(uri, filename) {
+        let link = document.createElement('a');
+        if (typeof link.download === 'string') {
+            link.href = uri;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } else {
+            window.open(uri);
+        }
+    }
+
+    return <button type='button' onClick={() => saveImage()}>저장</button>
 }
 export default Buttons;
